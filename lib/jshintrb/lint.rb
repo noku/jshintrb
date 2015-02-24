@@ -28,7 +28,8 @@ module Jshintrb
       :browser => true
     }
 
-    SourcePath = File.expand_path("../../js/jshint.js", __FILE__)
+    JSHINT_SOURCE_PATH =
+      File.expand_path("../../../vendor/jshint/dist/jshint.js", __FILE__)
 
     def initialize(options = nil, globals = nil)
 
@@ -45,7 +46,8 @@ module Jshintrb
 
       @globals = globals
 
-      @context = ExecJS.compile("var window = {};\n" + File.open(SourcePath, "r:UTF-8").read)
+      source = File.open(JSHINT_SOURCE_PATH, "r:UTF-8").read
+      @context = ExecJS.compile("var window = {};\n#{source}")
     end
 
     def lint(source)
