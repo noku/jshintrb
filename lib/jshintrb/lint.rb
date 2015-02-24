@@ -28,8 +28,7 @@ module Jshintrb
       :browser => true
     }
 
-    JSHINT_SOURCE_PATH =
-      File.expand_path("../../../vendor/jshint/dist/jshint.js", __FILE__)
+    JSHINT_SOURCE_PATH = File.expand_path("../../../vendor/jshint.js", __FILE__)
 
     def initialize(options = nil, globals = nil)
 
