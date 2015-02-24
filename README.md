@@ -66,6 +66,12 @@ If you pass `:defaults` as option, it is the same as if you pass following
 }
 ```
 
+## Upgrading
+
+  1. Update the latest `jshint` via `npm` or `bower`.
+  2. Replace `vendor/jshintrb` with the file in `dist` directory.
+  3. Commit your changes.
+
 ## TODO
 
  - add more tests
